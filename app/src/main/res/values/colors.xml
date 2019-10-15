@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#e76c0e</color>
+    <color name="primary">#ffffff</color>
+    <color name="colorPrimaryDark">#0a0e0a</color>
+    <color name="colorAccent">#e76c0e</color>
+    <color name="colorSplash">#e76c0e</color>
+    <color name="marker_secondary">#EE792A</color>
+    <color name="colorBlue">#FF03A9F4</color>
+    <color name="colorGradasi">#9CA5E9E4</color>
+
+
+</resources>
+

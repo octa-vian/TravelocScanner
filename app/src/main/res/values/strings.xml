@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">TravelocScannER</string>
+    <string name="api_error">Something bad happened, please try later</string>
+    <string name="barcode">*********</string>
+    <string name="api_unauthorized">You don\'t have permission to access this app</string>
+</resources>
