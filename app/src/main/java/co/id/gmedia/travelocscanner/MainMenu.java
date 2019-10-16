@@ -35,13 +35,13 @@ public class MainMenu extends AppCompatActivity {
         super.finish();
     }
 
-    /*@Override
+    @Override
     protected void onResume() {
         super.onResume();
         Intent intent = new Intent(MainMenu.this,ActivityScan2.class);
         startActivity(intent);
         finish();
 
-    }*/
+    }
 }
 
