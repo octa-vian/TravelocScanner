@@ -42,7 +42,6 @@ public class ActivityScan3 extends AppCompatActivity implements ZXingScannerView
         builder.setMessage(rawResult.getText());
         AlertDialog alert1 = builder.create();
         alert1.show();
-
         mScannerView.resumeCameraPreview(this);
     }
 }
