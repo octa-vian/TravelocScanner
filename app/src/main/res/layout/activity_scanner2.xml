@@ -7,6 +7,8 @@
     android:layout_height="match_parent">
 
 
+
+
     <ImageView
         android:id="@+id/ivBgContent"
         android:layout_width="match_parent"
@@ -30,5 +32,15 @@
         app:frameSize="1"
         app:frameThickness="0dp"
         app:maskColor="@android:color/transparent" />
+
+    <ImageView
+        android:id="@+id/btnback"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/logout"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentEnd="true"
+        />
 
 </RelativeLayout>

@@ -3,6 +3,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:padding="35dp"
+    android:background="@drawable/bg"
     android:layout_height="match_parent">
 
 
@@ -23,6 +24,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimaryDark"
             android:text="ID BOX:"
             android:textStyle="bold" />
 
@@ -41,6 +43,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Nama:"
+            android:textColor="@color/colorPrimaryDark"
             android:textStyle="bold" />
 
         <EditText
@@ -58,6 +61,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Email:"
+            android:textColor="@color/colorPrimaryDark"
             android:textStyle="bold" />
 
         <EditText
@@ -75,6 +79,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Phone:"
+            android:textColor="@color/colorPrimaryDark"
             android:textStyle="bold" />
 
         <EditText
@@ -103,7 +108,8 @@
                 android:background="@drawable/roundorange"
                 android:textColor="@color/primary"
                 android:layout_weight="1"
-                android:text="Simpan" />
+                android:textStyle="bold"
+                android:text="Simpan Data Barcode" />
         </LinearLayout>
 
 

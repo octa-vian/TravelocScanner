@@ -104,6 +104,8 @@ public class APIvolley {
                 params.put("Content-Type", "application/json");
                 params.put("Client-Service", "traveloc-indonesia");
                 params.put("Auth-Key", "gmedia");
+                params.put("Userid", AppSharedPreferences.getUserName(context));
+                params.put("Token", AppSharedPreferences.getToken(context));
                 return params;
             }
 

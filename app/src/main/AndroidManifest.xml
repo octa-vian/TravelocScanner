@@ -12,7 +12,7 @@
         android:label="Traveloc Scanner"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat">
+        android:theme="@style/AppTheme">
         <activity android:name=".MainMenu">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,6 +32,8 @@
         <activity android:name=".ActivityTampilDataBox" />
         <activity android:name=".ListViewDataBox" />
         <activity android:name=".TambahBox" />
+        <activity android:name=".ActivityLogin"
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
 
     </application>
 

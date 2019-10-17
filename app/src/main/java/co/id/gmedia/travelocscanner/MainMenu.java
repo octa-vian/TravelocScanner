@@ -38,7 +38,7 @@ public class MainMenu extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        Intent intent = new Intent(MainMenu.this,ActivityScan2.class);
+        Intent intent = new Intent(MainMenu.this,ActivityLogin.class);
         startActivity(intent);
         finish();
 

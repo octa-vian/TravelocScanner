@@ -2,9 +2,12 @@ package co.id.gmedia.travelocscanner;
 
         import android.Manifest;
         import android.app.Activity;
+        import android.content.Context;
         import android.content.DialogInterface;
         import android.content.Intent;
         import android.os.Bundle;
+        import android.util.Log;
+        import android.view.View;
         import android.widget.ImageView;
 
         import androidx.annotation.NonNull;
@@ -23,6 +26,7 @@ package co.id.gmedia.travelocscanner;
         import com.karumi.dexter.listener.PermissionRequest;
         import com.karumi.dexter.listener.single.PermissionListener;
 
+        import co.id.gmedia.travelocscanner.utils.AppSharedPreferences;
         import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
 public class ActivityScan2 extends AppCompatActivity  {
@@ -30,15 +34,24 @@ public class ActivityScan2 extends AppCompatActivity  {
     private CodeScanner mCodeScanner;
     private CodeScannerView scannerView;
     private ZXingScannerView mScannerView;
+    private ImageView btnexit;
     static String idBox="";
+    private Context context;
+    private static String TAG = "ActivityScan2";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scanner2);
+        context = this;
         ivBgContent = findViewById(R.id.ivBgContent);
         scannerView = findViewById(R.id.scannerView);
         ivBgContent.bringToFront();
+        //Btn logout
+        btnexit = findViewById(R.id.btnback);
+
+
+        //membaca dan memindahkan ID box
         mCodeScanner = new CodeScanner(this, scannerView);
         mCodeScanner.setDecodeCallback(new DecodeCallback() {
             @Override
@@ -48,9 +61,11 @@ public class ActivityScan2 extends AppCompatActivity  {
                     public void run() {
                         String message = "Box ID :\n" + result.getText();
                         //showAlertDialog(message);
+                        //mengambil id box
                         idBox = result.getText();
                         Intent intent= new Intent(ActivityScan2.this, TambahBox.class);
                         intent.putExtra("box_id", idBox);
+                        Log.d(TAG, "ID Box berhasil di ambil" +message );
                         startActivity(intent);
                         finish();
                     }
@@ -58,7 +73,20 @@ public class ActivityScan2 extends AppCompatActivity  {
             }
         });
         checkCameraPermission();
+        btnexit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AppSharedPreferences.Logout(context);
+                startActivity(new Intent(context, ActivityLogin.class));
+                finish();
+
+            }
+        });
     }
+
+
+
+
 
     @Override
     protected void onResume() {
